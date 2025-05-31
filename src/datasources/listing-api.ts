@@ -6,4 +6,7 @@ export class ListingAPI extends RESTDataSource {
   getFeaturedListings(): Promise<Listing[]> {
     return this.get<Listing[]>("featured-listings");
   }
+  getListing(id: string): Promise<Listing> {
+    return this.get<Listing>(`listings/${id}`);
+  }
 }
