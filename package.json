@@ -16,6 +16,7 @@
   "scripts": {
     "compile": "tsc",
     "dev": "ts-node-dev --respawn ./src/index.ts",
+    "generate": "graphql-codegen",
     "start": "npm run compile && nodemon ./dist/index.js",
     "test": "jest"
   },
@@ -27,6 +28,9 @@
     "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.6",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-resolvers": "^4.5.1",
     "@types/jest": "^29.0.3",
     "@types/node": "^20.0.0",
     "concurrently": "^8.2.2",
